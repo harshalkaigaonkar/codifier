@@ -1,19 +1,21 @@
 import React from "react";
-import Hero from "./pages/Hero";
+import {Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Compiler from "./pages/Compiler";
-import { Switch, Route, Redirect } from "react-router-dom";
+import Hero from "./pages/Hero";
+import PageTwo from "./pages/PageTwo";
 function App() {
   return (
-    <Switch>
-      <div className="bg-primary text-white">
-        <Route path="/" exact>
-          <Hero />
-        </Route>
-        <Route path="/compiler">
-          <Compiler/>
-        </Route>
-      </div>
-    </Switch>
+    <>
+      <Router>
+        <div className="bg-primary text-white">
+          <Switch>
+            <Route exact path="/" component={Hero} />
+            <Route exact path="/uploadfile" component={PageTwo} />
+            <Route path="/compiler" component={Compiler} />
+          </Switch>{" "}
+        </div>
+      </Router>
+    </>
   );
 }
 

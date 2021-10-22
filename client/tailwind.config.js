@@ -12,13 +12,16 @@ module.exports = {
       "2xl": "0 35px 35px rgba(255, 46, 99, 0.6);",
     },
 
-    // padding: {
-    //   sm: '8px',
-    //   md: '16px',
-    //   lg: '24px',
-    //   xl: '48px',
-    //   br:'132px'
-    //  },
+    borderWidth: {
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
+      26: "26px",
+    },
 
     colors: {
       // Configure your color palette here
