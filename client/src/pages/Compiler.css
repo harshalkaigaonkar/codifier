@@ -1,0 +1,53 @@
+.container{
+    background: #08D9D6;
+    width: 90%;
+height: 63%;
+box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+display: flex;
+
+}
+
+.code{
+padding:4px;
+
+margin: 30px;
+    height: 90%;
+    width: 55%;
+color:black;
+background: #EAEAEA;
+}
+.output{    margin: 30px
+    ;
+color:black;
+padding:4px;
+        height: 90%;
+        width: 45%;
+background: #EAEAEA;
+}
+
+.cmplbtn{
+    width: 146px;
+height: 45.33px;
+margin:10px;
+
+background: #FF2E63;
+border-radius: 30px;
+}
+
+
+@media screen and (max-width:768px) {
+ .container{
+     flex-direction: column;
+ }
+ .code{
+     width:90%;
+margin: 10px 30px;
+margin-top: 20px;
+ }   
+ .output{
+    margin: 10px 30px;
+    margin-bottom: 20px;
+     width:90%
+ }
+}

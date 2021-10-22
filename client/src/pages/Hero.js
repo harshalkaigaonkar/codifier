@@ -1,8 +1,12 @@
 import React from "react";
 import img1 from "../assets/img-1.png";
 import img2 from "../assets/img-2.png";
-
+import { useHistory } from "react-router-dom";
 function Hero() {
+  const history = useHistory();
+  const clickhandler = () => {
+    history.push("/compiler");
+  };
   return (
     <>
       <div className="flex flex-col items-center h-screen">
@@ -18,7 +22,10 @@ function Hero() {
         </div>
         <div className="font-medium	capitalize	">real code</div>
         <div className="py-8">
-          <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
+          <button
+            className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl "
+            onClick={clickhandler}
+          >
             Get Started
           </button>
         </div>
