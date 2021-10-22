@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img1 from "../assets/img-1.png";
 import img2 from "../assets/img-2.png";
 
@@ -17,11 +18,14 @@ function Hero() {
           <img src={img2} alt="img-2" />
         </div>
         <div className="font-medium	capitalize	">real code</div>
-        <div className="py-8">
-          <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
-            Get Started
-          </button>
-        </div>
+        <Link to="/uploadfile">
+          {" "}
+          <div className="py-8">
+            <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
+              Get Started
+            </button>
+          </div>
+        </Link>
       </div>
     </>
   );
