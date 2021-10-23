@@ -1,6 +1,5 @@
-import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import Loader from "../components/Loader";
+import { useEffect, useRef, useState } from "react";
 
 function Compiler(state) {
   const [lang, setLang] = useState("c");
