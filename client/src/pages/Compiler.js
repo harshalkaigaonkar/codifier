@@ -9,6 +9,7 @@ const Compiler = (state) => {
   const [load, setload] = useState(false);
   const coderef = useRef();
   const outputref = useRef();
+  
   useEffect(() => {
     coderef.current.value = state.state.code;
     // eslint-disable-next-line

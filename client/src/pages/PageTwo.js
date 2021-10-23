@@ -40,13 +40,7 @@ function PageTwo(state) {
           <img src={img1} alt="img-1" />
         </div>
         <div className="flex flex-col  items-center justify-center border box-border rounded-xl bg-white  text-black">
-          <div className="bg-secondary flex flex-col justify-center items-center border  h-40 w-52 rounded-2xl m-6">
-            {" "}
-            <div className="text-6xl py-4 ">
-              <FiCamera />
-            </div>{" "}
-            <div className="">Camera</div>
-          </div>
+          
           <div className="bg-secondary flex flex-col justify-center items-center border  h-40 w-52 rounded-2xl m-6">
             {" "}
             <div className="text-6xl py-4">
