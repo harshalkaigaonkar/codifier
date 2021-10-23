@@ -29,7 +29,7 @@ function PageTwo() {
         </div>
         <div className="my-6">
           <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
-            Get Started
+            {`<  > Convert`}
           </button>
         </div>
       </div>
