@@ -3,7 +3,6 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Compiler from "./pages/Compiler";
 import Hero from "./pages/Hero";
 import PageTwo from "./pages/PageTwo";
-
 function App() {
   let state = {
     code: null,
