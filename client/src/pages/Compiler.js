@@ -2,9 +2,11 @@ import img2 from "../assets/img-2.png";
 import "./Compiler.css";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const Compiler = (state) => {
   const [lang, setlang] = useState("c");
+  const [load, setload] = useState(false);
   const coderef = useRef();
   const outputref = useRef();
   useEffect(() => {
@@ -14,13 +16,14 @@ const Compiler = (state) => {
   const clickhandler = () => {
     console.log(lang);
     const res = coderef.current.value;
-
+    setload(true);
     axios
       .post("http://localhost:3001/api/output", {
         code: res,
         language: lang,
       })
       .then((response) => {
+        setload(false);
         outputref.current.value = response.data.output;
       });
   };
@@ -59,7 +62,12 @@ const Compiler = (state) => {
               ref={coderef}
             ></textarea>
           </div>
-          <textarea className="output" ref={outputref}></textarea>
+          {load && (
+            <div className="load">
+              <Loader />
+            </div>
+          )}
+          {!load && <textarea className="output" ref={outputref}></textarea>}
         </div>
         <button onClick={clickhandler} className="cmplbtn">
           Compile
