@@ -7,6 +7,7 @@ module.exports = {
       primary: "#252A34",
       secondary: "#08D9D6",
       tertiary: "#FF2E63",
+      black: "#000000",
     }),
     dropShadow: {
       "2xl": "0 35px 35px rgba(255, 46, 99, 0.6);",
@@ -30,6 +31,7 @@ module.exports = {
       secondary: "#08D9D6",
       btn: "#FF2E63",
       white: "#ffffff",
+      black: "#000000",
     },
     fontFamily: {
       serif: ["poppins"],
