@@ -8,7 +8,7 @@ const Compiler = () => {
   const clickhandler = () => {
     console.log(coderef.current.value);
     let x = coderef.current.value.split("\n");
-
+    console.log(x);
     const res = coderef.current.value;
     console.log(res);
     axios
