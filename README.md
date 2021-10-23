@@ -24,7 +24,7 @@ Sometimes it's hard to sit in front of a screen all day and write code. It defin
 * Figma: For Designing
 
 
-# AI Code Recognition Challenges
+# 💻AI Code Recognition Challenges
 Codifier uses Google API for recognizing the handritten text and converting into typed code, It also uses the Paiza API to compile the code into different programming languages.
 
 
