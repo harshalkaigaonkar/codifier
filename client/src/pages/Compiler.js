@@ -2,21 +2,24 @@ import img2 from "../assets/img-2.png";
 import "./Compiler.css";
 import { useRef, useState } from "react";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const Compiler = () => {
   const [lang, setlang] = useState("c");
+  const [load, setload] = useState(false);
   const coderef = useRef();
   const outputref = useRef();
   const clickhandler = () => {
     console.log(lang);
     const res = coderef.current.value;
-   
+    setload(true);
     axios
       .post("http://localhost:3001/api/output", {
         code: res,
         language: lang,
       })
       .then((response) => {
+        setload(false);
         outputref.current.value = response.data.output;
       });
   };
@@ -49,13 +52,18 @@ const Compiler = () => {
                 background: "white",
                 height: "95%",
                 margin: "10px 5px",
-                padding:"5px",
-                borderRadius:"10px"
+                padding: "5px",
+                borderRadius: "10px",
               }}
               ref={coderef}
             ></textarea>
           </div>
-          <textarea className="output" ref={outputref}></textarea>
+          {load && (
+            <div className="load">
+              <Loader />
+            </div>
+          )}
+          {!load && <textarea className="output" ref={outputref}></textarea>}
         </div>
         <button onClick={clickhandler} className="cmplbtn">
           Compile
