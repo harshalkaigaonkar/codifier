@@ -10,16 +10,15 @@ function PageTwo(state) {
 
   const history = useHistory();
   const clickHandler = async () => {
-    const formdata = new FormData();
-    formdata.append('Image', image.raw);
-    const res = await axios.post('http://localhost:3001/api/', formdata);
+    const formData = new FormData();
+    formData.append("Image", image.raw);
+    const res = await axios.post("http://localhost:3001/api/", formData);
     if (res.data) {
-      console.log(res.data)
-      state.state.code = res.data.code
+      console.log(res.data);
+      state.state.code = res.data.code;
       history.push("/compiler");
-    }
-    else {
-      console.log(res.error)
+    } else {
+      console.log(res.error);
       // need an error here
     }
   };
@@ -32,6 +31,7 @@ function PageTwo(state) {
       });
     }
   };
+
   return (
     <>
       <div className="flex flex-col items-center h-screen">
@@ -63,8 +63,16 @@ function PageTwo(state) {
             <div>Upload file</div>
           </div>
         </div>
-        <div onClick={clickHandler} className="my-6">
-          <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
+        <div
+          onClick={clickHandler}
+          className={`my-6 ${
+            image.raw.length === 0 ? "opacity-50	" : "opacity-100"
+          }`}
+        >
+          <button
+            disabled={image.raw.length === 0}
+            className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl"
+          >
             {`<  > Convert`}
           </button>
         </div>
