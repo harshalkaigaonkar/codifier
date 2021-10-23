@@ -7,6 +7,14 @@ Sometimes it's hard to sit in front of a screen all day and write code. It defin
 # 💻What it does
 **Codifier** is a web based code converter which can translate your *handwritten code* into *actual typed code* in just a few seconds. Don't worry about typing all the code, just scan and upload and *Et-voilà!* It also Compiles the code in various languages like **C,C++,Java,Python**.
 
+# 🔷Steps to Use
+1. Click on get Started.
+1. Select your programming language.
+1. Select the option to either click a photo or choose from gallery.
+1. Upload your Scanned code.
+1. Get your code on the screen, you can edit the code if you want
+1. Click the Compile button to compile it into the output screen.
+
 
 # 🔨How we built it
 * React Js: For the frontend
@@ -16,8 +24,8 @@ Sometimes it's hard to sit in front of a screen all day and write code. It defin
 * Figma: For Designing
 
 
-# AI Code Recognition Challenges
-Codifier uses Google API for recognizing the handritten text and converting into typed code, It also uses the Paiza API to compile the code into different languages.
+# 💻AI Code Recognition Challenges
+Codifier uses Google API for recognizing the handritten text and converting into typed code, It also uses the Paiza API to compile the code into different programming languages.
 
 
 # 🧠Use of Google API

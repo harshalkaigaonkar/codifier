@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import Compiler from "./pages/Compiler";
 import Hero from "./pages/Hero";
 import PageTwo from "./pages/PageTwo";
 function App() {
@@ -7,8 +8,11 @@ function App() {
     <>
       <Router>
         <div className="bg-primary text-white">
-          <Route exact path="/" component={Hero} />
-          <Route exact path="/uploadfile" component={PageTwo} />
+          <Switch>
+            <Route exact path="/" component={Hero} />
+            <Route exact path="/uploadfile" component={PageTwo} />
+            <Route path="/compiler" component={Compiler} />
+          </Switch>{" "}
         </div>
       </Router>
     </>
