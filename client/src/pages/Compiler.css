@@ -23,7 +23,10 @@ background: transparent;
 
 color:black;
 padding:4px;
-        height: 90%;
+position: relative;
+    top: 34px
+;
+        height: 80%;
         width: 45%;
 background: #EAEAEA;
 }
@@ -48,8 +51,9 @@ margin: 10px 30px;
 margin-top: 20px;
  }   
  .output{
-    margin: 10px 30px;
+    margin: 10px auto;
     margin-bottom: 20px;
-     width:90%
+     width:90%;
+     top:-10px;
  }
 }
