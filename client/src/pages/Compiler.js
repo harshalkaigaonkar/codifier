@@ -1,16 +1,20 @@
 import img2 from "../assets/img-2.png";
 import "./Compiler.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
-const Compiler = () => {
+const Compiler = (state) => {
   const [lang, setlang] = useState("c");
   const coderef = useRef();
   const outputref = useRef();
+  useEffect(() => {
+    coderef.current.value = state.state.code;
+    // eslint-disable-next-line
+  }, [])
   const clickhandler = () => {
     console.log(lang);
     const res = coderef.current.value;
-   
+
     axios
       .post("http://localhost:3001/api/output", {
         code: res,
@@ -49,8 +53,8 @@ const Compiler = () => {
                 background: "white",
                 height: "95%",
                 margin: "10px 5px",
-                padding:"5px",
-                borderRadius:"10px"
+                padding: "5px",
+                borderRadius: "10px"
               }}
               ref={coderef}
             ></textarea>

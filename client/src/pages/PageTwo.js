@@ -3,13 +3,25 @@ import img1 from "../assets/img-1.png";
 import { FiCamera } from "react-icons/fi";
 import { GrGallery } from "react-icons/gr";
 import { useHistory } from "react-router";
+import axios from "axios";
 
-function PageTwo() {
+function PageTwo(state) {
   const [image, setImage] = useState({ preview: "", raw: "" });
 
   const history = useHistory();
-  const clickHandler = () => {
-    history.push("/compiler");
+  const clickHandler = async () => {
+    const formdata = new FormData();
+    formdata.append('Image', image.raw);
+    const res = await axios.post('http://localhost:3001/api/', formdata);
+    if (res.data) {
+      console.log(res.data)
+      state.state.code = res.data.code
+      history.push("/compiler");
+    }
+    else {
+      console.log(res.error)
+      // need an error here
+    }
   };
 
   const handleChange = (e) => {
@@ -20,7 +32,6 @@ function PageTwo() {
       });
     }
   };
-  console.log(image);
   return (
     <>
       <div className="flex flex-col items-center h-screen">
