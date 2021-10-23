@@ -27,7 +27,6 @@ router.post("/output", async (req, res, next) => {
     clientId: "ab42481cb8b420578f54ce9c4f7e87ab",
     clientSecret:
       "80d1afaa4977ef4cee4d8de40b83294a851b51f0250ad15dd8f555ff4d86e1f8",
-    // script: "#include<stdio.h>\nint main(){\nprintf(\"Hello\");\nreturn 0;\n}",
     script: String(code),
     versionIndex: "0",
     language,
