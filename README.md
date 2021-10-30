@@ -36,7 +36,7 @@ Codifier uses Google Cloud Vision API for recognizing the handritten code and co
 
 ## 🏅Challenges We ran into
 * Communication gap due to Online Hackathons.
-* The Biggest Challenge we ran into was to configure the API to recognize and convert the code.
+* The Biggest Challenge we ran into was, to configure the API to recognize and convert the code.
 * Compiling and running the code into different languages.
 
 ## 📖What we learnt

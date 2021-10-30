@@ -10,16 +10,15 @@ function PageTwo(state) {
 
   const history = useHistory();
   const clickHandler = async () => {
-    const formdata = new FormData();
-    formdata.append('Image', image.raw);
-    const res = await axios.post('http://localhost:3001/api/', formdata);
+    const formData = new FormData();
+    formData.append("Image", image.raw);
+    const res = await axios.post("http://localhost:3001/api/", formData);
     if (res.data) {
-      console.log(res.data)
-      state.state.code = res.data.code
+      console.log(res.data);
+      state.state.code = res.data.code;
       history.push("/compiler");
-    }
-    else {
-      console.log(res.error)
+    } else {
+      console.log(res.error);
       // need an error here
     }
   };
@@ -32,6 +31,7 @@ function PageTwo(state) {
       });
     }
   };
+
   return (
     <>
       <div className="flex flex-col items-center h-screen">
@@ -40,7 +40,22 @@ function PageTwo(state) {
           <img src={img1} alt="img-1" />
         </div>
         <div className="flex flex-col  items-center justify-center border box-border rounded-xl bg-white  text-black">
-          
+          <div className="bg-secondary flex flex-col justify-center items-center border  h-40 w-52 rounded-2xl m-6">
+            {" "}
+            <div className="text-6xl py-4">
+              <label htmlFor="upload-button">
+                <FiCamera />
+              </label>
+              <input
+                type="file"
+                id="upload-button"
+                style={{ display: "none" }}
+                onChange={handleChange}
+              />
+            </div>{" "}
+            <div>Camera</div>
+          </div>
+
           <div className="bg-secondary flex flex-col justify-center items-center border  h-40 w-52 rounded-2xl m-6">
             {" "}
             <div className="text-6xl py-4">
@@ -57,9 +72,17 @@ function PageTwo(state) {
             <div>Upload file</div>
           </div>
         </div>
-        <div onClick={clickHandler} className="my-6">
-          <button className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl">
-            {`<  > Convert`}
+        <div
+          onClick={clickHandler}
+          className={`my-6 ${
+            image.raw.length === 0 ? "opacity-50	" : "opacity-100"
+          }`}
+        >
+          <button
+            disabled={image.raw.length === 0}
+            className="text-white bg-btn px-12 py-4 rounded-full filter drop-shadow-2xl text-2xl"
+          >
+            {`< / > Convert`}
           </button>
         </div>
       </div>

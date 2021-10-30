@@ -1,10 +1,10 @@
 .container {
   background: #08d9d6;
-  width: 90%;
-  height: 63%;
+  height: 70%;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   display: flex;
+  padding: 10px;
 }
 
 .code {
@@ -18,29 +18,25 @@
   background: transparent;
 }
 .output {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  color: black;
+  padding: 0;
+}
+
+.load {
+  width: 48%;
+  height: 80%;
   margin: 30px;
   border-radius: 10px;
 
-  color: black;
   padding: 4px;
   position: relative;
   top: 34px;
   height: 80%;
   width: 45%;
-  background: #eaeaea;
-}
-
-.load{
-    width: 48%;
-    height: 80%;
-    margin: 30px;
-    border-radius: 10px;
-  
-    padding: 4px;
-    position: relative;
-    top: 34px;
-    height: 80%;
-    width: 45%;
 }
 
 .cmplbtn {
@@ -51,11 +47,11 @@
   background: #ff2e63;
   border-radius: 30px;
 }
-.load{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -74,4 +70,3 @@
     top: -10px;
   }
 }
-
