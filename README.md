@@ -49,8 +49,6 @@ Codifier uses Google Cloud Vision API for recognizing the handritten code and co
 * APIs
 * PWA (Progressive Web Applications)
 
-## 🚀What's Next for Codifier
-* Adding the Camera feature for recognizing the code as a built-in feature.
-* Authenticating the user and storing their code in the Database.
-* Visualizing the code.
-* Adding input option in code compilation for user.
+## WireFrames 
+[click here](https://www.figma.com/proto/geIJeadw8u9XAQ4BrdAMp2/Codifier?node-id=2%3A2&starting-point-node-id=2%3A2)
+
