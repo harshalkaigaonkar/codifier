@@ -1,4 +1,5 @@
-
+## Update
+Due to less Cloud Credits, main content cannot be visible
 
 ## 💡Inspiration
 Sometimes it's hard to sit in front of a screen all day and write code. It definitely takes a **toll on your health**. So why not go *old-school* and write the code on a pen and paper so that it doesn't affect your Health.
